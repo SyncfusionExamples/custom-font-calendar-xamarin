@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CalendarXamarin"
+             xmlns:calendar="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             x:Class="CalendarXamarin.MainPage">
+    <Grid>
+        <calendar:SfCalendar x:Name="calendar"
+                             DataSource="{Binding Appointments}">
+           <calendar:SfCalendar.MonthViewSettings>
+                <calendar:MonthViewSettings>
+                    <calendar:MonthViewSettings.HeaderFontFamily>
+                        <OnPlatform x:TypeArguments="x:String" iOS="Lobster-Regular" Android="Lobster-Regular.ttf" WinPhone="Assets/Lobster-Regular.ttf#Lobster" />
+                    </calendar:MonthViewSettings.HeaderFontFamily>
+                    <calendar:MonthViewSettings.DayHeaderFontFamily>
+                        <OnPlatform x:TypeArguments="x:String" iOS="Lobster-Regular" Android="Lobster-Regular.ttf" WinPhone="Assets/Lobster-Regular.ttf#Lobster" />
+                    </calendar:MonthViewSettings.DayHeaderFontFamily>
+                    <calendar:MonthViewSettings.DayCellFontFamily>
+                        <OnPlatform x:TypeArguments="x:String" iOS="Lobster-Regular" Android="Lobster-Regular.ttf" WinPhone="Assets/Lobster-Regular.ttf#Lobster" />
+                    </calendar:MonthViewSettings.DayCellFontFamily>
+                </calendar:MonthViewSettings>
+            </calendar:SfCalendar.MonthViewSettings>
+            <calendar:SfCalendar.BindingContext>
+                <local:ViewModel/>
+            </calendar:SfCalendar.BindingContext>
+        </calendar:SfCalendar>
+    </Grid>
+</ContentPage>
